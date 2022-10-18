@@ -1,0 +1,74 @@
+:root {
+    --main-btn-color: #272727;
+    --gold-btn-color: #ffbe00;
+    --error-color: #df3d3b;
+    --scale-factor: 0.75;
+}
+
+button, input[type="submit"], input[type="reset"] {
+	background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
+
+html {
+    max-width: 70ch;
+    padding: 3em 1em;
+    margin: auto;
+    line-height: 1.75;
+    font-size: 1.25em;
+    font-family: 'Oxygen', cursive;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0 1em;
+}
+
+p,
+ul,
+ol {
+    margin-bottom: 2em;
+    color: #1d1d1d;
+    font-family: sans-serif;
+}
+
+.button-grid{
+    width: calc(426px*var(--scale-factor));
+    height: calc(95*var(--scale-factor)*5px);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+}
+
+.calc-btn{
+    color: var(--main-btn-color);
+    text-align: center;
+    justify-content: center;
+}
+
+.op-btn{
+    font-size: 1.4em;
+    color: var(--gold-btn-color);
+}
+
+#equals{
+    font-size: 1.4em;
+    color: #ffffff;
+    background-color: var(--gold-btn-color);
+}
+
+.result-box{
+    height: calc(var(--scale-factor)*260px);
+    width: calc(var(--scale-factor)*426px);
+    text-align: right;
+    background-color: var(--error-color);
+}
